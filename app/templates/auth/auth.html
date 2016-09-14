@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block page_content %}
+    <div class="tell1story-index">
+        <div class="tell1story-title">
+            <p class="tell1story-name">讲一个故事</p>
+            <p class="tell1story-about">来这里写下心情</p>
+        </div>
+        <form action="" method="post" class="form" role="form">
+            <div class="tell1story-sign-box">
+                <div style="display:none;">
+                    {{ form.csrf_token() }}
+                </div>
+                {% if where == 'register' %}
+                    <div class="tell1story-sign-box-title">
+                        <a class="tell1story-sign-box-navigate-active" href="{{ url_for('auth.register') }}">注册</a>
+                        <a class="tell1story-sign-box-navigate" href="{{ url_for('auth.login') }}">登录</a>
+                    </div>
+                    <div class="tell1story-group-input">
+                        <div class="tell1story-input-wrapper">
+                        {{ form.email(placeholder=form.email.label.text) }}
+                        {% if form.email.errors %}
+                            {% if form.email.errors[0] == 'This field is required.' %}
+                                <span class="tell1story-input-error">邮箱不能为空</span>
+                            {% else %}
+                                <span class="tell1story-input-error">{{ form.email.errors[0] }}</span>
+                            {% endif %}
+                        {% endif %}
+                        </div>
+                        <div class="tell1story-input-wrapper">
+                        {{ form.username(placeholder=form.username.label.text) }}
+                        {% if form.username.errors %}
+                            {% if form.username.errors[0] == 'This field is required.' %}
+                                <span class="tell1story-input-error">用户名不能为空</span>
+                            {% else %}
+                                <span class="tell1story-input-error">{{ form.username.errors[0] }}</span>
+                            {% endif %}
+                        {% endif %}
+                        </div>
+                        <div class="tell1story-input-wrapper">
+                        {{ form.password(placeholder=form.password.label.text) }}
+                        {% if form.password.errors %}
+                            {% if form.password.errors[0] == 'This field is required.' %}
+                                <span class="tell1story-input-error">密码不能为空</span>
+                            {% else %}
+                                <span class="tell1story-input-error">{{ form.password.errors[0] }}</span>
+                            {% endif %}
+                        {% endif %}
+                        </div>
+                    </div>
+                    <div class="tell1story-group-button">
+                        <button class="tell1story-button-default">注册</button>
+                    </div>
+                {% else %}
+                    <div class="tell1story-sign-box-title">
+                        <a class="tell1story-sign-box-navigate" href="{{ url_for('auth.register') }}">注册</a>
+                        <a class="tell1story-sign-box-navigate-active" href="{{ url_for('auth.login') }}">登录</a>
+                    </div>
+                    <div class="tell1story-group-input">
+                        <div class="tell1story-input-wrapper">
+                            {{ form.email(placeholder=form.email.label.text) }}
+                            {% if form.email.errors %}
+                                {% if form.email.errors[0] == 'This field is required.' %}
+                                    <span class="tell1story-input-error">邮箱不能为空</span>
+                                {% else %}
+                                    <span class="tell1story-input-error">{{ form.email.errors[0] }}</span>
+                                {% endif %}
+                            {% endif %}
+                        </div>
+                        <div class="tell1story-input-wrapper">
+                            {{ form.password(placeholder=form.password.label.text) }}
+                            {% if form.password.errors %}
+                                {% if form.password.errors[0] == 'This field is required.' %}
+                                    <span class="tell1story-input-error">密码不能为空</span>
+                                {% else %}
+                                    <span class="tell1story-input-error">{{ form.password.errors[0] }}</span>
+                                {% endif %}
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="tell1story-group-button">
+                        <button class="tell1story-button-default">登录</button>
+                    </div>
+                    <div class="tell1story-group-other">
+                        {{ form.remember_me() }}
+                        <span>{{ form.remember_me.label.text }}</span>
+                        <a class="te111story-other-forget-password" href="#">忘记密码？</a>
+                    </div>
+                {% endif %}
+            </div>
+        </form>
+    </div>
+{% endblock %}
