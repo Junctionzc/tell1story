@@ -1,0 +1,156 @@
+div, a, h1 {
+    font-family: Microsoft Yahei;
+    color: #777;
+}
+/*div {
+    outline-style: dashed;
+    outline-width: 1px;
+    outline-color: red;
+}*/
+
+/*标题栏样式*/
+.navbar-inverse {
+    background: #fff;
+    border-color: #fff;
+}
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover,  .navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-brand:focus, .navbar-inverse .navbar-brand:hover {
+    color: #000;
+}
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
+    color: #777;
+    background-color: lightgray;
+}
+.navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav>li>a {
+    color: #777;
+}
+.navbar-inverse .navbar-toggle, .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    border-color: lightgray;
+}
+.navbar-inverse .navbar-toggle .icon-bar {
+    background: #777;
+}
+@media (max-width: 767px) {
+    .navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
+        color: #777;
+    }
+}
+
+/*内容样式*/
+.tell1story-index {
+    text-align: center;
+}
+.tell1story-title {
+    margin-top: 20px;
+}
+.tell1story-name {
+    font-size: 36px;
+    color: #336699;
+    margin-bottom: 20px;
+}
+.tell1story-about {
+    font-size: 20px;
+    color: gray;
+}
+.tell1story-sign-box {
+    margin-top: 20px;
+}
+.tell1story-sign-box-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.tell1story-sign-box-navigate,
+.tell1story-sign-box-navigate:hover, .tell1story-sign-box-navigate:focus {
+    margin: 0px 10px;
+    color: gray;
+    text-decoration: none;
+}
+.tell1story-sign-box-navigate-active, .tell1story-sign-box-navigate-active:hover,
+.tell1story-sign-box-navigate-active:focus {
+    margin: 0px 10px;
+    border-bottom: 2px solid #336699;
+    color: #336699;
+    text-decoration: none;
+}
+.tell1story-group-input {
+    margin: 20px auto;
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    width: 250px;
+}
+.tell1story-input-wrapper {
+    position: relative;
+}
+.tell1story-input-error {
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    color: #a94442;
+    font-size: 12px;
+}
+.tell1story-input-wrapper+.tell1story-input-wrapper {
+    border-top: 1px solid lightgray;
+}
+.tell1story-input-wrapper>input {
+    width: 100%;
+    border: 0px;
+    padding: 10px;
+}
+.tell1story-input-wrapper>input:focus {
+    outline: none;
+}
+.tell1story-group-button {
+    width: 250px;
+    margin: 20px auto;
+}
+.tell1story-group-button>button {
+    display: block;
+}
+.tell1story-button-default {
+    height: 32px;
+    width: 100%;
+    background: #336699;
+    color: #fff;
+    border: 1px solid #336699;
+    border-radius: 2px;
+}
+.tell1story-button-default:hover {
+    background: #003366;
+}
+.tell1story-group-other {
+    width: 250px;
+    margin: 0px auto;
+}
+.tell1story-group-other>input, .tell1story-group-other>span{
+    float: left;
+}
+.te111story-other-forget-password {
+    float: right;
+}
+.tell1story-container {
+    border: 1px solid lightgray;
+    padding: 20px 50px;
+}
+.tell1story-weibo-cell {
+    margin-top: 20px;
+    border: 1px solid lightgray;
+}
+.tell1story-header {
+    font-size: 20px;
+    font-family: Microsoft Yahei;
+    border-bottom: 2px solid lightgray;
+    padding-bottom: 10px;
+}
+.tell1story-weibo-header {
+    padding: 5px 10px;
+    border-left: 4px solid #d9edf7;
+    border-bottom: 1px solid lightgray;
+    font-size: 10px;
+}
+.tell1story-weibo-content {
+    font-size: 16px;
+    padding: 5px 10px;
+    border-left: 4px solid #dff0d8;
+}
+.tell1story-weibo-input-div {
+    margin-top: 20px;
+}

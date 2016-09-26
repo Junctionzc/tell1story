@@ -1,0 +1,81 @@
+.ya-body {
+    margin: 0px;
+}
+.ya-body-container {
+    height: 862px;
+    width: 1745px;
+    margin: 0px;
+    position:relative;
+}
+.ya-body-background {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+.ya-login-container {
+    height: 264px;
+    width: 300px;
+    border: 0px solid #fff;
+    border-radius: 4px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.4);
+    position: absolute;
+    top: 90px;
+    right: 90px;
+}
+.ya-login-tip {
+    margin: 5px 0px;
+    font-size: 20px;
+}
+.ya-login-input-group {
+    margin-top: 20px;
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    padding: 10px;
+}
+.ya-login-input-ico {
+    padding: 0px 5px;
+}
+.ya-login-input-email {
+    border-bottom: 2px solid lightgray;
+    padding-bottom: 10px;
+}
+.ya-login-input-password {
+    padding-top: 10px;
+}
+.ya-login-input-email input, .ya-login-input-password input {
+    width: 205px;
+    border: 0px;
+}
+.ya-login-input-email input:focus, .ya-login-input-password input:focus {
+    outline: none;
+}
+.ya-login-others {
+    margin-top: 10px;
+}
+.ya-login-button-group {
+    margin-top: 10px;
+}
+.ya-button {
+    height: 38px;
+    width: 100%;
+    font-size: 18px;
+    border: 0px solid transparent;
+    border-radius: 4px;
+}
+.ya-button-red {
+    background: #da4740;
+    color: #fff;
+}
+.ya-button-red:hover {
+    background: #e85a53;
+    color: #fff;
+}
+.ya-button-default {
+    background: rgba(255, 255, 255, 0.16);
+    color: #777;
+}
+.ya-button-default:hover {
+    background: rgba(186, 201, 208, 0.39);
+}
