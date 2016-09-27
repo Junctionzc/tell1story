@@ -17,13 +17,21 @@ class Weibo(db.Model, ModelMixin):
         self.created_time = int(time.time())
 
     def __repr__(self):
-        return '<Blog %r>' % self.title
+        return '<Weibo %r>' % self.id
 
     def valid(self):
         if len(self.content) > 0 and len(self.content) < 128:
             return True
         else:
             return False
+
+    def json(self):
+        d = dict(
+            weibo_id = self.id,
+            weibo_content = self.content,
+            weibo_created_time = self.created_time  
+        )
+        return d
 
     def get_localtime(self):
         value = time.localtime(self.created_time)

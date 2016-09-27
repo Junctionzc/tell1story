@@ -137,6 +137,7 @@ div, a, h1 {
 .tell1story-header {
     font-size: 20px;
     font-family: Microsoft Yahei;
+    margin-bottom: 20px;
     border-bottom: 2px solid lightgray;
     padding-bottom: 10px;
 }
@@ -146,11 +147,20 @@ div, a, h1 {
     border-bottom: 1px solid lightgray;
     font-size: 10px;
 }
+.tell1story-weibo-header a {
+    margin-left: 5px; 
+}
+.tell1story-weibo-edit {
+    color: #31708f;
+}
+.tell1story-weibo-delete {
+    color: #a94442;
+}
 .tell1story-weibo-content {
     font-size: 16px;
     padding: 5px 10px;
     border-left: 4px solid #dff0d8;
 }
 .tell1story-weibo-input-div {
-    margin-top: 20px;
+    margin-top: 5px;
 }

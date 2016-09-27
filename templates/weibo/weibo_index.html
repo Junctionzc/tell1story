@@ -21,11 +21,21 @@
                     <div class="tell1story-weibo-header">
                         <span>{{ w.get_localtime() }}</span>
                         {% if current_user.is_authenticated %}
-                            <a href="{{ url_for('weibo.delete', id=w.id) }}">删除</a>
+                            <a class="tell1story-weibo-edit" href="#">修改</a>
+                            <a class="tell1story-weibo-delete" href="{{ url_for('weibo.delete', id=w.id) }}">删除</a>
                         {% endif %}
                     </div>
                     <div class="tell1story-weibo-content">
-                        <span>{{ w.content }}</span>
+                        <span class="tell1story-weibo-content-text">{{ w.content }}</span>
+                        {% if current_user.is_authenticated %}
+                            <span class="tell1story-weibo-id ya-hide">{{ w.id }}</span>
+                            <div class="tell1story-weibo-input-div input-group ya-hide">
+                                <input type="text" name="weibo" class="form-control" placeholder="输入微博" value="{{ w.content }}">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default tell1story-weibo-update">修改</button>
+                                </span>
+                            </div>
+                        {% endif %}
                     </div>
                 </div>
             {% endfor %}

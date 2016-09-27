@@ -1,9 +1,12 @@
+.ya-hide {
+    display: none;
+}
 .ya-body {
     margin: 0px;
 }
 .ya-body-container {
-    height: 862px;
-    width: 1745px;
+    height: 950px;
+    width: 1920px;
     margin: 0px;
     position:relative;
 }
@@ -47,6 +50,7 @@
 .ya-login-input-email input, .ya-login-input-password input {
     width: 205px;
     border: 0px;
+    background: transparent;
 }
 .ya-login-input-email input:focus, .ya-login-input-password input:focus {
     outline: none;
