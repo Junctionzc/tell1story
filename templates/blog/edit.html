@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block jscript %}
+{{ super() }}
+<script src="http://cdn.bootcss.com/showdown/1.4.3/showdown.min.js"></script>
+<script src="{{ url_for('static', filename='js/blog_edit.js') }}""></script>
+{% endblock %}
+
+{% block page_content %}
+    <div class="tell1story-container">
+        <h1 class="tell1story-header">博客</h1>
+        <div class="row">
+            <div class="tell1story-write-group col-md-6">
+                <form action="{{ url_for('blog.update', id=blog.id) }}" method='post'>
+                    <input id="input-title" class="tell1story-write-title" name="title" placeholder="输入标题" type="text" value="{{ blog.title }}"/>
+                    <div class="tell1story-write-content-group">
+                        <div class="tell1story-write-content-header">
+                            <button id="button-picture" type="button" data-toggle="modal" data-target="#upload-picture-modal"><span class="glyphicon glyphicon-picture"></span></button>
+                            <button id="button-bold" type="button"><span class="glyphicon glyphicon-bold"></span></button>
+                            <button id="button-italic" type="button"><span class="glyphicon glyphicon-italic"></span></button>
+                            <button id="button-list" type="button"><span class="glyphicon glyphicon-list"></span></button>
+                            <button id="button-font" type="button"><span class="glyphicon glyphicon-font"></span></button>
+                            <button id="button-link" type="button"><span class="glyphicon glyphicon-link"></span></button>
+                        </div>
+                        <textarea id="textarea-content" class="tell1story-write-content" name="content">{{ blog.body }}</textarea>
+                    </div>
+                    <button class="btn btn-primary" type="submit">发表</button>
+                    <a href="{{ url_for('blog.blog', id=blog.id) }}"><button class="btn btn-default" type="button">取消</button></a>
+                </form>
+            </div>
+            <div class="col-md-6 hidden-xs">
+                <div id="div-preview-title" class="tell1story-preview-title">{{ blog.title }}</div>
+                <div id="div-preview-content" class="tell1story-preview-content"></div>
+            </div>
+        </div>
+    </div>
+    {% include 'blog/_upload_picture.html' %}
+{% endblock %}

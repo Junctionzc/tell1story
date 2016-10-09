@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block page_content %}
+    <ul class="tell1story-list-group">
+        {% for b in blog_list %}
+        <li class="tell1story-list-item"><a href="{{ url_for('blog.blog', id=b.id) }}">{{ b.title }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}

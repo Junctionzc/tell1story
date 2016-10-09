@@ -1,6 +1,39 @@
 .ya-hide {
     display: none;
 }
+.ya-float-left {
+    float: left;
+}
+.ya-float-right {
+    float: right;
+}
+.ya-flex {
+    display: flex;
+}
+.ya-flex-1 {
+    flex-grow: 1;
+}
+.ya-flex-2 {
+    flex-grow: 2;
+}
+.ya-flex-3 {
+    flex-grow: 3;
+}
+.ya-flex-4 {
+    flex-grow: 4;
+}
+.ya-flex-5 {
+    flex-grow: 5;
+}
+.ya-flex-6 {
+    flex-grow: 6;
+}
+.ya-flex-7 {
+    flex-grow: 7;
+}
+.ya-flex-8 {
+    flex-grow: 8;
+}
 .ya-body {
     margin: 0px;
 }

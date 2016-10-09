@@ -7,7 +7,15 @@ div, a, h1 {
     outline-width: 1px;
     outline-color: red;
 }*/
-
+pre {
+    border: 1px solid lightgray;
+    border-radius: 1px;
+    padding: 10px;
+}
+code {
+    font-family: Consolas;
+    font-size: 13px;
+}
 /*标题栏样式*/
 .navbar-inverse {
     background: #fff;
@@ -163,4 +171,89 @@ div, a, h1 {
 }
 .tell1story-weibo-input-div {
     margin-top: 5px;
+}
+.tell1story-list-group {
+    list-style-type: none;
+    padding: 5px;
+}
+.tell1story-list-item:first-child {
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+}
+.tell1story-list-item:last-child {
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+.tell1story-list-item {
+    border: 1px solid lightgray;
+    margin-bottom: -1px;
+    padding: 9px 15px;
+}
+.tell1story-write-group {
+    margin-bottom: 10px;
+}
+.tell1story-write-title {
+    height: 28px;
+    width: 100%;
+    font-size: 12px;
+    display: block;
+    border: 1px solid lightgray;
+    padding: 0px 5px;
+}
+.tell1story-write-content {
+    height: 380px;
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    resize: none;
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid lightgray;
+}
+.tell1story-write-content-header {
+    font-size: 12px;
+    padding: 5px;
+    border-right: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+}
+.tell1story-write-content-header button {
+    border: 1px solid lightgray;
+    border-radius: 1px;
+    background: #fff;
+}
+.tell1story-write-content-header button:hover {
+    background: lightgray;
+}
+.tell1story-write-content-header span {
+    margin: 0px 5px;
+}
+.tell1story-preview-title {
+    height: 28px;
+    width: 100%;
+    font-size: 12px;
+    display: block;
+    border: 1px solid lightgray;
+    padding: 5px;
+}
+.tell1story-preview-content {
+    height: 409px;
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    resize: none;
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid lightgray;
+    border-top: none;
+    overflow: auto;
+}
+.tell1story-header-manage {
+    margin: 5px;
+}
+.tell1story-blog-content img {
+    vertical-align: middle;
+    max-width: 100%;
+    border: 0px solid #333;
+    border-radius: 4px;
+    box-shadow: 2px 2px 8px #333;
 }

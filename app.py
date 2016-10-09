@@ -12,6 +12,7 @@ from routes.auth import main as routes_auth
 from routes.blog import main as routes_blog
 from routes.weibo import main as routes_weibo
 from routes.tool import main as routes_tool
+from api.blog import main as api_blog
 from api.weibo import main as api_weibo
 
 
@@ -31,6 +32,7 @@ def create_app(config_name):
     app.register_blueprint(routes_blog, url_prefix = '/blog')
     app.register_blueprint(routes_weibo)
     app.register_blueprint(routes_tool, url_prefix = '/tool')
+    app.register_blueprint(api_blog, url_prefix = '/api/blog')
     app.register_blueprint(api_weibo, url_prefix = '/api/weibo')
 
     return app

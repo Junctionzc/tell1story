@@ -10,7 +10,7 @@ main = Blueprint('auth', __name__)
 def index():
     if current_user.is_authenticated:
         return redirect(url_for('weibo.index'))
-    return redirect(url_for('.login'))
+    return redirect(url_for('auth.login'))
 
 
 @main.route('/login', methods=['GET', 'POST'])
@@ -20,7 +20,7 @@ def login():
         user = User.query.filter_by(email = form.email.data).first()
         if user is not None and user.verify_password(form.password.data):
             login_user(user, form.remember_me.data)
-            return redirect(url_for('weibo.index'))
+            return redirect(url_for('blog.index'))
         flash(u'用户名或密码错误')
     return render_template('auth/login1.html', form = form)
 
@@ -30,7 +30,7 @@ def login():
 def logout():
     logout_user()
     flash(u'你已经注销')
-    return redirect(url_for('weibo.index'))
+    return redirect(url_for('blog.index'))
 
 
 @main.app_errorhandler(404)

@@ -6,6 +6,7 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 
 class Config:
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'jrtirt235342jh1@$fd'
+    BLOG_FOLDER = 'static/img/blog'
 
     @staticmethod
     def init_app(app):
