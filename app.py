@@ -29,8 +29,8 @@ def create_app(config_name):
     login_manager.init_app(app)
 
     app.register_blueprint(routes_auth, url_prefix = '/auth')
-    app.register_blueprint(routes_blog, url_prefix = '/blog')
-    app.register_blueprint(routes_weibo)
+    app.register_blueprint(routes_blog)
+    app.register_blueprint(routes_weibo, url_prefix = '/weibo')
     app.register_blueprint(routes_tool, url_prefix = '/tool')
     app.register_blueprint(api_blog, url_prefix = '/api/blog')
     app.register_blueprint(api_weibo, url_prefix = '/api/weibo')
